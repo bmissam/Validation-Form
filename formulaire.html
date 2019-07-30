@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        Inscription
+    </header>
+    <main>
+        <form id="form">
+            <div class="section">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="user_name">
+            </div>
+            <div class="section">
+                <label for="name">Adresse :</label>
+                <input type="text" id="adresse" name="user_adresse">
+            </div>
+            <div class="section">
+                <label for="mail">e-mail :</label>
+                <input type="email" id="mail" name="user_mail">
+            </div>
+            <div class="section">
+                <label for="mail">Mot de Passe :</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="section">
+                <label for="msg">Message :</label>
+                <textarea id="msg" name="user_message"></textarea>
+            </div>
+            <div class="section">
+                <input type="submit" id="verif" value="Submit">
+                <input type="reset" class="boutton" value="Reset">
+            </div>
+        </form>
+    </main>
+    <script>
+        let ps = document.getElementById('name')
+        let adress = document.getElementById('adresse')
+        let mail = document.getElementById('mail')
+        let pass = document.getElementById('password')
+        let msg = document.getElementById('msg')
+        var form = document.getElementById('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            Empty(ps, adress, mail, pass, msg);
+            Password(pass);
+            email(mail)
+
+
+        })
+
+        function Empty(ps, adress, mail, pass, msg) {
+            if (ps.value === '') {
+                alert("name is missing ")
+                ps.focus()
+            } else if (adress.value === '') {
+                alert("adresse is missing ")
+                adress.focus()
+            } else if (mail.value === '') {
+                alert("mail is missing ")
+                mail.focus()
+            } else if (pass.value === '') {
+                alert("password is missing ")
+                pass.focus()
+            } else if (msg.value === '') {
+                alert("message is missing ")
+                msg.focus()
+            }
+
+            return false
+
+        }
+
+        function Password(pass) {
+            var str = pass.value;
+            if (!(str.match(/[A-Z]/g))) {
+                alert(" PASSWORD Must containt at least one Uppercase  ")
+                pass.focus()
+
+            } else if (str.length < 8) {
+                alert(" PASSWORD Must containt at least 8 caracters ")
+            } else if (!(str.match(/[0-9]/g))) {
+                alert("PASSWORD Must containt at least one number")
+            }
+
+            return false
+        }
+
+        function email(mail) {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+                return (true)
+            }
+            alert("invalid email address!")
+            return (false)
+        }
+    </script>
+</body>
+
+
+</html>

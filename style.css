@@ -1,0 +1,78 @@
+.section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column
+}
+
+form {
+    width: 320px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    margin-top: 25px;
+    color: white;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #2C395A;
+    color: white
+}
+
+#name {
+    border-radius: 5px;
+    background-color: #2F2D3D;
+    color: wheat;
+    height: 20px;
+}
+
+#adresse {
+    border-radius: 5px;
+    background-color: #2F2D3D;
+    color: wheat;
+    height: 20px;
+}
+
+#mail {
+    border-radius: 5px;
+    background-color: #2F2D3D;
+    color: wheat;
+    height: 20px;
+}
+
+#password {
+    border-radius: 5px;
+    background-color: #2F2D3D;
+    color: wheat;
+    height: 20px;
+}
+
+#msg {
+    border-radius: 5px;
+    background-color: #2F2D3D;
+    color: wheat;
+    height: 20px;
+}
+
+.boutton {
+    border-radius: 5px;
+    background-color: #2F2D3D;
+    color: wheat;
+    height: 30px;
+}
+
+#verif {
+    border-radius: 5px;
+    background-color: #2F2D3D;
+    color: wheat;
+    height: 30px;
+}
